@@ -1,12 +1,298 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Zohar Babin</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zohar Babin — Projects</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d1117;
+      --surface: #161b22;
+      --border: #30363d;
+      --text: #e6edf3;
+      --muted: #8b949e;
+      --accent: #2f81f7;
+      --tag-bg: #1f2937;
+      --tag-text: #93c5fd;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container { max-width: 900px; margin: 0 auto; }
+
+    header { margin-bottom: 3rem; }
+    header h1 { font-size: 1.6rem; font-weight: 600; margin-bottom: .25rem; }
+    header p { color: var(--muted); font-size: .95rem; }
+    header a { color: var(--accent); text-decoration: none; }
+    header a:hover { text-decoration: underline; }
+
+    h2 {
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin: 2.5rem 0 1rem;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      transition: border-color .15s;
+    }
+    .card:hover { border-color: var(--accent); }
+
+    .card-title {
+      font-size: .95rem;
+      font-weight: 600;
+    }
+    .card-title a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .card-title a:hover { text-decoration: underline; }
+
+    .card-desc {
+      font-size: .85rem;
+      color: var(--muted);
+      flex: 1;
+    }
+
+    .card-links {
+      display: flex;
+      gap: .75rem;
+      flex-wrap: wrap;
+      margin-top: .25rem;
+    }
+    .card-links a {
+      font-size: .78rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .3em;
+    }
+    .card-links a:hover { color: var(--text); }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .35rem;
+      margin-top: .1rem;
+    }
+    .tag {
+      font-size: .7rem;
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      border-radius: 4px;
+      padding: .1em .5em;
+    }
+
+    footer {
+      margin-top: 4rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: .8rem;
+    }
+    footer a { color: var(--muted); }
+    footer a:hover { color: var(--text); }
+  </style>
 </head>
 <body>
-  <ul>
-    <li><a href="https://zoharbabin.github.io/web-researcher-mcp/">Web Researcher MCP</a></li>
-  </ul>
+<div class="container">
+
+  <header>
+    <h1>Zohar Babin</h1>
+    <p>Builder of AI tools, agentic systems, and developer infrastructure. —
+      <a href="https://github.com/zoharbabin" target="_blank" rel="noopener">GitHub</a> ·
+      <a href="https://x.com/zohar" target="_blank" rel="noopener">X / Twitter</a>
+    </p>
+  </header>
+
+  <h2>AI Agents &amp; Research Tools</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-title"><a href="https://zoharbabin.github.io/web-researcher-mcp/" target="_blank" rel="noopener">Web Researcher MCP</a></div>
+      <div class="card-desc">AI research assistant that cites real sources and stays honest. Web search, content extraction, and multi-source research for any MCP client.</div>
+      <div class="tags"><span class="tag">Go</span><span class="tag">MCP</span><span class="tag">AI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/web-researcher-mcp" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://zoharbabin.github.io/web-researcher-mcp/" target="_blank" rel="noopener">📖 Docs</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://zoharbabin.github.io/due-diligence-agents/" target="_blank" rel="noopener">Due Diligence Agents</a></div>
+      <div class="card-desc">Open-source forensic M&amp;A due diligence: 13 AI agents across 9 domains (Legal, Finance, Cyber, HR, ESG…), every finding traced to an exact page &amp; quote.</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Multi-agent</span><span class="tag">AI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/due-diligence-agents" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://zoharbabin.github.io/due-diligence-agents/" target="_blank" rel="noopener">📖 Docs</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/enterprise-ai-agents-spec" target="_blank" rel="noopener">Enterprise AI Agents Spec</a></div>
+      <div class="card-desc">Open blueprint for implementing highly scalable swarms of specialized AI agents in enterprise product development, with governance and compliance.</div>
+      <div class="tags"><span class="tag">Spec</span><span class="tag">Agentic AI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/enterprise-ai-agents-spec" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://zoharbabin.github.io/enterprise-ai-agents-spec/" target="_blank" rel="noopener">📖 Docs</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/telegram-monitor" target="_blank" rel="noopener">Telegram Monitor</a></div>
+      <div class="card-desc">Real-time Telegram channel monitoring with AI-powered intelligence briefings. Multi-pane TUI dashboard with Claude-powered analysis, translation, and urgency scoring.</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Claude</span><span class="tag">TUI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/telegram-monitor" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/quantum-trader" target="_blank" rel="noopener">Quantum Trader</a></div>
+      <div class="card-desc">Intelligent stock trading bot combining technical &amp; qualitative analysis with Interactive Brokers TWS API integration.</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Finance</span><span class="tag">AI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/quantum-trader" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Developer Tools &amp; CLIs</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/brand-voice" target="_blank" rel="noopener">Brand Voice</a></div>
+      <div class="card-desc">Enforce brand writing guidelines in Claude Code — PostToolUse hook + MCP server + CLI.</div>
+      <div class="tags"><span class="tag">Claude Code</span><span class="tag">MCP</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/brand-voice" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/claude-code-message-timestamps" target="_blank" rel="noopener">Claude Code Timestamps</a></div>
+      <div class="card-desc">Show local time on every Claude Code message and let Claude know when each prompt was sent. Zero-config plugin, cross-OS.</div>
+      <div class="tags"><span class="tag">Claude Code</span><span class="tag">Plugin</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/claude-code-message-timestamps" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/company-recon-skill" target="_blank" rel="noopener">Company Recon Skill</a></div>
+      <div class="card-desc">Claude Code skill for SaaS technology reconnaissance — discovers every website embedding a target company's technology using OSINT.</div>
+      <div class="tags"><span class="tag">Claude Code</span><span class="tag">OSINT</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/company-recon-skill" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/github-org-stats" target="_blank" rel="noopener">GitHub Org Stats</a></div>
+      <div class="card-desc">Comprehensive tool for analyzing GitHub organization statistics with multiple auth methods and output formats.</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">PyPI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/github-org-stats" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://pypi.org/project/github-org-stats/" target="_blank" rel="noopener">📦 PyPI</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/edgar_analytics" target="_blank" rel="noopener">EDGAR Analytics</a></div>
+      <div class="card-desc">Python library for extracting, analyzing, and forecasting SEC EDGAR filings. Comprehensive metrics, growth rates, and automated reporting.</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Finance</span><span class="tag">PyPI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/edgar_analytics" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://pypi.org/project/edgar-analytics/" target="_blank" rel="noopener">📦 PyPI</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/kaltura-mcp" target="_blank" rel="noopener">Kaltura MCP</a></div>
+      <div class="card-desc">MCP server powering agentic AI workflows with Kaltura's media management API.</div>
+      <div class="tags"><span class="tag">MCP</span><span class="tag">Kaltura</span><span class="tag">Video</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/kaltura-mcp" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <h2>Creative &amp; Community</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/whatsanuker" target="_blank" rel="noopener">WhatsaNuker</a></div>
+      <div class="card-desc">AI-driven gatekeeper for WhatsApp Communities. Vets join requests, snipes spam, and boots bad actors in real time using Claude on AWS Bedrock.</div>
+      <div class="tags"><span class="tag">Node.js</span><span class="tag">Claude</span><span class="tag">WhatsApp</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/whatsanuker" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://zoharbabin.github.io/ai-hackerspace-chat-chronicles/" target="_blank" rel="noopener">AI Chat Chronicles</a></div>
+      <div class="card-desc">Interactive web app that summarizes WhatsApp group chats, highlighting key moments, trends, and personalized year-in-review.</div>
+      <div class="tags"><span class="tag">Web</span><span class="tag">AI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/ai-hackerspace-chat-chronicles" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://zoharbabin.github.io/ai-hackerspace-chat-chronicles/" target="_blank" rel="noopener">🌐 Live</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/karaokify" target="_blank" rel="noopener">Karaokify</a></div>
+      <div class="card-desc">Transforms audio into dynamic karaoke-style highlight videos for social media — transcription, crossfading, waveform overlays, and subtitles.</div>
+      <div class="tags"><span class="tag">Python</span><span class="tag">Video</span><span class="tag">AI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/karaokify" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-title"><a href="https://github.com/zoharbabin/prompetize" target="_blank" rel="noopener">Prompetize</a></div>
+      <div class="card-desc">Chrome extension that centralizes AI prompt templates with GitHub-powered version control and built-in analytics.</div>
+      <div class="tags"><span class="tag">Chrome Extension</span><span class="tag">AI</span></div>
+      <div class="card-links">
+        <a href="https://github.com/zoharbabin/prompetize" target="_blank" rel="noopener">⭐ GitHub</a>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>
+      <a href="https://github.com/zoharbabin" target="_blank" rel="noopener">github.com/zoharbabin</a>
+    </p>
+  </footer>
+
+</div>
 </body>
 </html>
