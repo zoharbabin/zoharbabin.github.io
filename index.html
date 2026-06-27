@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Zohar Babin — Builder of AI Tools &amp; Agentic Systems</title>
+  <title>Zohar Babin — Chief Trouble Maker</title>
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
   new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -11,262 +11,312 @@
   'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
   })(window,document,'script','dataLayer','GTM-P225W69C');</script>
   <!-- End Google Tag Manager -->
-  <!-- Restore saved theme before first paint to avoid flash -->
   <script>(function(){var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);})();</script>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    /* ── Color tokens: dark (default) ── */
     :root {
       --bg: #0d1117;
       --surface: #161b22;
-      --border: #30363d;
+      --border: #21262d;
       --text: #e6edf3;
       --text-sub: #c9d1d9;
       --muted: #8b949e;
       --accent: #2f81f7;
       --tag-bg: #1f2937;
       --tag-text: #93c5fd;
-      --feat-bg: rgba(47,129,247,.05);
-      --feat-border: rgba(47,129,247,.35);
-      --shadow: 0 1px 3px rgba(0,0,0,.35);
-      --shadow-hover: 0 4px 16px rgba(47,129,247,.15);
     }
-
-    /* System light preference (no explicit theme saved) */
     @media (prefers-color-scheme: light) {
       :root:not([data-theme]) {
-        --bg: #f6f8fa;
-        --surface: #ffffff;
-        --border: #d0d7de;
+        --bg: #ffffff;
+        --surface: #f6f8fa;
+        --border: #e4e8ec;
         --text: #1f2328;
         --text-sub: #454c54;
-        --muted: #57606a;
+        --muted: #656d76;
         --accent: #0969da;
-        --tag-bg: #ddf4ff;
+        --tag-bg: #eef2f7;
         --tag-text: #0550ae;
-        --feat-bg: #f0f7ff;
-        --feat-border: rgba(9,105,218,.28);
-        --shadow: 0 1px 3px rgba(0,0,0,.1);
-        --shadow-hover: 0 4px 16px rgba(9,105,218,.13);
       }
     }
-
-    /* Explicit theme overrides */
     [data-theme="light"] {
-      --bg: #f6f8fa;
-      --surface: #ffffff;
-      --border: #d0d7de;
+      --bg: #ffffff;
+      --surface: #f6f8fa;
+      --border: #e4e8ec;
       --text: #1f2328;
       --text-sub: #454c54;
-      --muted: #57606a;
+      --muted: #656d76;
       --accent: #0969da;
-      --tag-bg: #ddf4ff;
+      --tag-bg: #eef2f7;
       --tag-text: #0550ae;
-      --feat-bg: #f0f7ff;
-      --feat-border: rgba(9,105,218,.28);
-      --shadow: 0 1px 3px rgba(0,0,0,.1);
-      --shadow-hover: 0 4px 16px rgba(9,105,218,.13);
     }
     [data-theme="dark"] {
       --bg: #0d1117;
       --surface: #161b22;
-      --border: #30363d;
+      --border: #21262d;
       --text: #e6edf3;
       --text-sub: #c9d1d9;
       --muted: #8b949e;
       --accent: #2f81f7;
       --tag-bg: #1f2937;
       --tag-text: #93c5fd;
-      --feat-bg: rgba(47,129,247,.05);
-      --feat-border: rgba(47,129,247,.35);
-      --shadow: 0 1px 3px rgba(0,0,0,.35);
-      --shadow-hover: 0 4px 16px rgba(47,129,247,.15);
     }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
-      padding: 2.5rem 1.25rem 5rem;
-      transition: background .18s, color .18s;
+      line-height: 1.65;
+      padding: 3rem 1.5rem 6rem;
+      transition: background .2s, color .2s;
     }
-
-    .container { max-width: 960px; margin: 0 auto; }
+    .container { max-width: 900px; margin: 0 auto; }
 
     /* ── Header ── */
     header {
       display: flex;
-      align-items: flex-start;
       justify-content: space-between;
+      align-items: flex-start;
       gap: 1.5rem;
-      margin-bottom: 3rem;
+      margin-bottom: 3.5rem;
       flex-wrap: wrap;
     }
-
     .bio h1 {
-      font-size: 1.8rem;
-      font-weight: 700;
-      letter-spacing: -.025em;
-      margin-bottom: .25rem;
+      font-size: 2rem;
+      font-weight: 800;
+      letter-spacing: -.03em;
+      margin-bottom: .3rem;
     }
-    .bio p { color: var(--muted); font-size: .95rem; }
-
-    .header-links {
+    .bio .tagline {
+      font-size: .98rem;
+      color: var(--text-sub);
+      margin-bottom: .1rem;
+    }
+    .bio .sub {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .header-actions {
       display: flex;
       align-items: center;
-      gap: .5rem;
+      gap: .45rem;
       flex-wrap: wrap;
-      padding-top: .2rem;
+      padding-top: .35rem;
     }
-
-    .pill-link {
+    .pill {
       display: inline-flex;
       align-items: center;
       gap: .35em;
-      font-size: .82rem;
+      font-size: .8rem;
       font-weight: 500;
       color: var(--muted);
       text-decoration: none;
-      padding: .32rem .75rem;
+      padding: .28rem .75rem;
       border: 1px solid var(--border);
       border-radius: 20px;
       white-space: nowrap;
-      transition: color .15s, border-color .15s, background .15s;
+      transition: color .15s, border-color .15s;
     }
-    .pill-link:hover { color: var(--text); border-color: var(--accent); background: var(--surface); }
-
+    .pill:hover { color: var(--accent); border-color: var(--accent); }
     .theme-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 2rem; height: 2rem;
+      width: 1.9rem; height: 1.9rem;
       background: none;
       border: 1px solid var(--border);
-      border-radius: 20px;
+      border-radius: 50%;
       cursor: pointer;
       color: var(--muted);
-      transition: color .15s, border-color .15s, background .15s;
-      flex-shrink: 0;
+      transition: color .15s, border-color .15s;
     }
-    .theme-btn:hover { color: var(--text); border-color: var(--accent); background: var(--surface); }
+    .theme-btn:hover { color: var(--accent); border-color: var(--accent); }
 
-    /* ── Section labels ── */
+    /* ── Section heading ── */
     h2 {
-      font-size: .7rem;
+      font-size: .62rem;
       font-weight: 700;
       text-transform: uppercase;
-      letter-spacing: .1em;
+      letter-spacing: .13em;
       color: var(--muted);
-      margin: 2.75rem 0 1rem;
-      padding-bottom: .45rem;
-      border-bottom: 1px solid var(--border);
+      margin: 3.25rem 0 1.5rem;
     }
 
-    /* ── Grids ── */
-    .feat-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-      gap: 1rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
-      gap: 1rem;
-    }
+    /* ═══════════════════════════════
+       EDITORIAL LIST  (Writing)
+    ═══════════════════════════════ */
+    .ed-list { border-top: 1px solid var(--border); }
 
-    /* ── Cards ── */
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 1.15rem 1.3rem;
-      display: flex;
-      flex-direction: column;
-      gap: .55rem;
-      box-shadow: var(--shadow);
-      transition: border-color .15s, box-shadow .15s, background .18s;
-    }
-    .card:hover { border-color: var(--accent); box-shadow: var(--shadow-hover); }
-
-    .card.feat {
-      background: var(--feat-bg);
-      border-color: var(--feat-border);
-      padding: 1.45rem 1.55rem;
-    }
-    .card.feat:hover { border-color: var(--accent); }
-
-    .card-head {
+    .ed-item {
       display: flex;
       align-items: flex-start;
-      justify-content: space-between;
-      gap: .5rem;
+      gap: 1.5rem;
+      padding: 1.15rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
     }
-
-    .card-title { font-size: .96rem; font-weight: 600; }
-    .card.feat .card-title { font-size: 1.1rem; }
-    .card-title a { color: var(--accent); text-decoration: none; }
-    .card-title a:hover { text-decoration: underline; }
-
-.card-desc { font-size: .86rem; color: var(--muted); flex: 1; line-height: 1.55; }
-    .card.feat .card-desc { font-size: .9rem; }
-
-    /* Stat pills (featured cards) */
-    .stats { display: flex; flex-wrap: wrap; gap: .4rem; }
-    .stat {
-      display: inline-flex;
-      align-items: center;
-      gap: .3em;
-      font-size: .74rem;
+    .ed-type {
+      font-size: .58rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--accent);
+      min-width: 3.4rem;
+      padding-top: .3rem;
+      flex-shrink: 0;
+    }
+    .ed-body { flex: 1; min-width: 0; }
+    .ed-title {
+      font-size: 1rem;
       font-weight: 600;
-      background: var(--tag-bg);
+      color: var(--text);
+      line-height: 1.4;
+      transition: color .15s;
+    }
+    .ed-item:hover .ed-title { color: var(--accent); }
+    .ed-desc {
+      font-size: .83rem;
+      color: var(--muted);
+      margin-top: .2rem;
+      line-height: 1.5;
+    }
+    .ed-arrow {
+      color: var(--muted);
+      font-size: .85rem;
+      padding-top: .28rem;
+      flex-shrink: 0;
+      transition: color .15s, transform .15s;
+    }
+    .ed-item:hover .ed-arrow { color: var(--accent); transform: translate(3px,-3px); }
+
+    /* ═══════════════════════════════
+       SPOTLIGHT  (Featured Projects)
+    ═══════════════════════════════ */
+    .spotlight-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+      gap: 2rem 3.5rem;
+    }
+    .spotlight { border-left: 2px solid var(--accent); padding-left: 1.35rem; }
+    .spotlight-name {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      display: block;
+      margin-bottom: .45rem;
+      transition: color .15s;
+    }
+    .spotlight-name:hover { color: var(--accent); }
+    .spotlight-desc {
+      font-size: .87rem;
       color: var(--text-sub);
+      line-height: 1.6;
+      margin-bottom: .85rem;
+    }
+    .stats { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .65rem; }
+    .stat {
+      font-size: .7rem;
+      font-weight: 600;
+      color: var(--text-sub);
+      background: var(--tag-bg);
       border-radius: 20px;
       padding: .2em .7em;
     }
-
-    /* Tech tags */
-    .tags { display: flex; flex-wrap: wrap; gap: .35rem; }
+    .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .65rem; }
     .tag {
-      font-size: .68rem;
+      font-size: .65rem;
       font-weight: 500;
-      background: var(--tag-bg);
       color: var(--tag-text);
-      border-radius: 4px;
-      padding: .1em .5em;
+      background: var(--tag-bg);
+      border-radius: 3px;
+      padding: .1em .45em;
     }
-
-    /* Links row */
-    .links { display: flex; gap: .7rem; flex-wrap: wrap; margin-top: .1rem; }
-    .links a {
-      font-size: .8rem;
+    .s-links { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .s-links a {
+      font-size: .79rem;
       color: var(--muted);
       text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: .25em;
       transition: color .15s;
     }
-    .links a:hover { color: var(--accent); }
+    .s-links a:hover { color: var(--accent); }
 
-    /* Footer */
+    /* ═══════════════════════════════
+       PROJECT ROWS  (All others)
+    ═══════════════════════════════ */
+    .proj-section { border-top: 1px solid var(--border); margin-top: 3rem; }
+    .proj-section:first-child { margin-top: 0; }
+
+    .proj-group-label {
+      font-size: .58rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .13em;
+      color: var(--muted);
+      padding: 1.1rem 0 .55rem;
+    }
+
+    .proj-row {
+      display: flex;
+      gap: .75rem 1.75rem;
+      align-items: baseline;
+      padding: .75rem 0;
+      border-bottom: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .proj-name {
+      font-size: .88rem;
+      font-weight: 600;
+      min-width: 12.5rem;
+      flex-shrink: 0;
+    }
+    .proj-name a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .proj-name a:hover { text-decoration: underline; }
+    .proj-desc {
+      font-size: .82rem;
+      color: var(--muted);
+      flex: 1;
+      min-width: 0;
+    }
+    .proj-actions {
+      display: flex;
+      gap: .55rem;
+      align-items: center;
+      flex-shrink: 0;
+      flex-wrap: wrap;
+    }
+    .proj-actions .tag { font-size: .63rem; }
+    .proj-actions a {
+      font-size: .76rem;
+      color: var(--muted);
+      text-decoration: none;
+      white-space: nowrap;
+      transition: color .15s;
+    }
+    .proj-actions a:hover { color: var(--accent); }
+
+    /* ── Footer ── */
     footer {
       margin-top: 5rem;
       padding-top: 1.5rem;
       border-top: 1px solid var(--border);
+      font-size: .78rem;
       color: var(--muted);
-      font-size: .8rem;
       display: flex;
-      gap: 1.25rem;
+      gap: 1.5rem;
       flex-wrap: wrap;
     }
     footer a { color: var(--muted); text-decoration: none; }
     footer a:hover { color: var(--text); }
 
-    @media (max-width: 520px) {
+    @media (max-width: 580px) {
       header { flex-direction: column; }
-      .feat-grid { grid-template-columns: 1fr; }
+      .spotlight-grid { grid-template-columns: 1fr; }
+      .proj-name { min-width: 100%; }
     }
   </style>
 </head>
@@ -281,80 +331,78 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <header>
     <div class="bio">
       <h1>Zohar Babin</h1>
-      <p>Chief Trouble Maker. I build, I break, I dream, I play — not necessarily in that order.</p>
-      <p style="color:var(--muted);font-size:.85rem;margin-top:.2rem;">Software · AI · strategy · product · community. Disciplines are just suggestions.</p>
+      <p class="tagline">Chief Trouble Maker. I build, I break, I dream, I play — not necessarily in that order.</p>
+      <p class="sub">Software · AI · strategy · product · community. Disciplines are just suggestions.</p>
     </div>
-    <div class="header-links">
-      <a class="pill-link" href="https://github.com/zoharbabin" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+    <div class="header-actions">
+      <a class="pill" href="https://github.com/zoharbabin" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
         GitHub
       </a>
-      <a class="pill-link" href="https://www.linkedin.com/in/zoharbabin/" target="_blank" rel="noopener">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      <a class="pill" href="https://www.linkedin.com/in/zoharbabin/" target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
         LinkedIn
       </a>
-      <a class="pill-link" href="https://x.com/zohar" target="_blank" rel="noopener">
-        <svg width="14" height="14" viewBox="0 0 1200 1227" fill="currentColor" aria-hidden="true"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
-        X / Twitter
+      <a class="pill" href="https://x.com/zohar" target="_blank" rel="noopener">
+        <svg width="13" height="13" viewBox="0 0 1200 1227" fill="currentColor" aria-hidden="true"><path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z"/></svg>
+        X
       </a>
-      <button class="theme-btn" id="theme-btn" title="Toggle light / dark mode" aria-label="Toggle color theme">
-        <svg id="ico-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-        <svg id="ico-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>
+      <button class="theme-btn" id="theme-btn" aria-label="Toggle color theme">
+        <svg id="ico-moon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg id="ico-sun" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="display:none" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="4.22" y1="4.22" x2="6.34" y2="6.34"/><line x1="17.66" y1="17.66" x2="19.78" y2="19.78"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/><line x1="4.22" y1="19.78" x2="6.34" y2="17.66"/><line x1="17.66" y1="6.34" x2="19.78" y2="4.22"/></svg>
       </button>
     </div>
   </header>
 
-  <!-- ── Writing & Talks ── -->
+  <!-- ─── Writing & Talks ─── -->
   <h2>Writing &amp; Talks</h2>
-  <div class="grid">
+  <div class="ed-list">
 
-    <div class="card">
-      <div class="card-title"><a href="https://www.linkedin.com/pulse/sloptimization-ai-citation-rot-tools-fight-back-zohar-babin-xcahc/" target="_blank" rel="noopener">Sloptimization, AI Citation Rot, and the Tools That Fight Back</a></div>
-      <div class="card-desc">Why AI assistants confidently cite sources that don't exist — and how to build tools that actually verify their own claims.</div>
-      <div class="tags"><span class="tag">AI</span><span class="tag">Research</span><span class="tag">Article</span></div>
-      <div class="links">
-        <a href="https://www.linkedin.com/pulse/sloptimization-ai-citation-rot-tools-fight-back-zohar-babin-xcahc/" target="_blank" rel="noopener">↗ Read on LinkedIn</a>
+    <a class="ed-item" href="https://www.linkedin.com/pulse/sloptimization-ai-citation-rot-tools-fight-back-zohar-babin-xcahc/" target="_blank" rel="noopener">
+      <span class="ed-type">Article</span>
+      <div class="ed-body">
+        <div class="ed-title">Sloptimization, AI Citation Rot, and the Tools That Fight Back</div>
+        <div class="ed-desc">Why AI assistants confidently cite sources that don't exist — and how to build tools that actually verify their own claims.</div>
       </div>
-    </div>
+      <span class="ed-arrow">↗</span>
+    </a>
 
-    <div class="card">
-      <div class="card-title"><a href="https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/" target="_blank" rel="noopener">Why Your AI Coding Assistant Is Failing You — and How to Fix It</a></div>
-      <div class="card-desc">The root causes behind AI coding tools that hallucinate, forget context, and ship broken code — and what you can actually do about it.</div>
-      <div class="tags"><span class="tag">AI</span><span class="tag">Engineering</span><span class="tag">Article</span></div>
-      <div class="links">
-        <a href="https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/" target="_blank" rel="noopener">↗ Read on LinkedIn</a>
+    <a class="ed-item" href="https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/" target="_blank" rel="noopener">
+      <span class="ed-type">Article</span>
+      <div class="ed-body">
+        <div class="ed-title">Why Your AI Coding Assistant Is Failing You — and How to Fix It</div>
+        <div class="ed-desc">The root causes behind AI coding tools that hallucinate, forget context, and ship broken code — and what you can do about it.</div>
       </div>
-    </div>
+      <span class="ed-arrow">↗</span>
+    </a>
 
-    <div class="card">
-      <div class="card-title"><a href="https://zoharbabin.com/web-researcher-mcp/decks/compliance/" target="_blank" rel="noopener">Compliance as Architecture</a></div>
-      <div class="card-desc">One maintainer. One open-source repo. Aligned with 23 security &amp; privacy standards — without writing 23 checklists. How good architecture replaces paperwork.</div>
-      <div class="tags"><span class="tag">Security</span><span class="tag">Open Source</span><span class="tag">Deck</span></div>
-      <div class="links">
-        <a href="https://zoharbabin.com/web-researcher-mcp/decks/compliance/" target="_blank" rel="noopener">↗ View deck</a>
+    <a class="ed-item" href="https://zoharbabin.com/web-researcher-mcp/decks/compliance/" target="_blank" rel="noopener">
+      <span class="ed-type">Deck</span>
+      <div class="ed-body">
+        <div class="ed-title">Compliance as Architecture</div>
+        <div class="ed-desc">One maintainer. One open-source repo. Aligned with 23 security &amp; privacy standards — without writing 23 checklists. How good architecture replaces paperwork.</div>
       </div>
-    </div>
+      <span class="ed-arrow">↗</span>
+    </a>
 
-    <div class="card">
-      <div class="card-title"><a href="https://zoharbabin.com/due-diligence-agents/marketing/presentation.html" target="_blank" rel="noopener">Due Diligence Agents — AI-Powered M&amp;A Due Diligence</a></div>
-      <div class="card-desc">Nine specialist AI agents read an entire data room in parallel, cross-reference every finding, and trace every conclusion to an exact page and quote.</div>
-      <div class="tags"><span class="tag">AI</span><span class="tag">M&amp;A</span><span class="tag">Deck</span></div>
-      <div class="links">
-        <a href="https://zoharbabin.com/due-diligence-agents/marketing/presentation.html" target="_blank" rel="noopener">↗ View deck</a>
+    <a class="ed-item" href="https://zoharbabin.com/due-diligence-agents/marketing/presentation.html" target="_blank" rel="noopener">
+      <span class="ed-type">Deck</span>
+      <div class="ed-body">
+        <div class="ed-title">Due Diligence Agents — AI-Powered M&amp;A Due Diligence</div>
+        <div class="ed-desc">Nine specialist AI agents read an entire data room in parallel, cross-reference every finding, and trace every conclusion to an exact page and quote.</div>
       </div>
-    </div>
+      <span class="ed-arrow">↗</span>
+    </a>
 
   </div>
 
-  <!-- ── Featured Projects ── -->
+  <!-- ─── Featured Projects ─── -->
   <h2>Featured Projects</h2>
-  <div class="feat-grid">
+  <div class="spotlight-grid">
 
-    <div class="card feat">
-      <div class="card-head">
-        <div class="card-title"><a href="https://zoharbabin.com/web-researcher-mcp/" target="_blank" rel="noopener">Web Researcher MCP</a></div>
-      </div>
-      <div class="card-desc">Your AI research assistant for any MCP client — web search, content extraction, and multi-source deep research. Every result is cited to the real source. Free, private, open source.</div>
+    <div class="spotlight">
+      <a class="spotlight-name" href="https://zoharbabin.com/web-researcher-mcp/" target="_blank" rel="noopener">Web Researcher MCP</a>
+      <p class="spotlight-desc">Your AI research assistant for any MCP client — web search, content extraction, and multi-source deep research. Every result is cited to the real source. Free, private, open source.</p>
       <div class="stats">
         <span class="stat" id="stars-wrm">★ —</span>
         <span class="stat">30+ tools</span>
@@ -363,7 +411,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="stat">Docker · Binary · uvx</span>
       </div>
       <div class="tags"><span class="tag">Go</span><span class="tag">MCP</span><span class="tag">AI</span><span class="tag">Research</span></div>
-      <div class="links">
+      <div class="s-links">
         <a href="https://github.com/zoharbabin/web-researcher-mcp" target="_blank" rel="noopener">⭐ GitHub</a>
         <a href="https://zoharbabin.com/web-researcher-mcp/" target="_blank" rel="noopener">📖 Docs</a>
         <a href="https://hub.docker.com/r/zoharbabin/web-researcher-mcp" target="_blank" rel="noopener">🐳 Docker</a>
@@ -371,11 +419,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
 
-    <div class="card feat">
-      <div class="card-head">
-        <div class="card-title"><a href="https://zoharbabin.com/due-diligence-agents/" target="_blank" rel="noopener">Due Diligence Agents</a></div>
-      </div>
-      <div class="card-desc">Forensic M&amp;A due diligence powered by a swarm of 13 specialized AI agents across 9 domains — Legal, Finance, Cyber, HR, ESG, and more. Every finding is traced to an exact page and quote.</div>
+    <div class="spotlight">
+      <a class="spotlight-name" href="https://zoharbabin.com/due-diligence-agents/" target="_blank" rel="noopener">Due Diligence Agents</a>
+      <p class="spotlight-desc">Forensic M&amp;A due diligence powered by 13 specialized AI agents across 9 domains — Legal, Finance, Cyber, HR, ESG, and more. Every finding traced to an exact page and quote.</p>
       <div class="stats">
         <span class="stat" id="stars-dda">★ —</span>
         <span class="stat">13 AI agents</span>
@@ -383,7 +429,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <span class="stat">Multi-LLM</span>
       </div>
       <div class="tags"><span class="tag">Python</span><span class="tag">Multi-agent</span><span class="tag">AI</span><span class="tag">Finance</span></div>
-      <div class="links">
+      <div class="s-links">
         <a href="https://github.com/zoharbabin/due-diligence-agents" target="_blank" rel="noopener">⭐ GitHub</a>
         <a href="https://zoharbabin.com/due-diligence-agents/" target="_blank" rel="noopener">📖 Docs</a>
       </div>
@@ -391,107 +437,104 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   </div>
 
-  <!-- ── AI Agents & Research ── -->
-  <h2>AI Agents &amp; Research Tools</h2>
-  <div class="grid">
+  <!-- ─── More Projects ─── -->
+  <h2>More Projects</h2>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/enterprise-ai-agents-spec" target="_blank" rel="noopener">Enterprise AI Agents Spec</a></div>
-      <div class="card-desc">Open blueprint for implementing highly scalable swarms of specialized AI agents in enterprise product development, with governance and compliance.</div>
-      <div class="tags"><span class="tag">Spec</span><span class="tag">Agentic AI</span></div>
-      <div class="links">
+  <div class="proj-section">
+    <div class="proj-group-label">AI Agents &amp; Research</div>
+
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://zoharbabin.com/enterprise-ai-agents-spec/" target="_blank" rel="noopener">Enterprise AI Agents Spec</a></div>
+      <div class="proj-desc">Open blueprint for scalable AI agent swarms in enterprise product development — governance, compliance, and architecture.</div>
+      <div class="proj-actions">
+        <span class="tag">Spec</span><span class="tag">Agentic AI</span>
         <a href="https://github.com/zoharbabin/enterprise-ai-agents-spec" target="_blank" rel="noopener" data-stars="zoharbabin/enterprise-ai-agents-spec">⭐ GitHub</a>
-        <a href="https://zoharbabin.com/enterprise-ai-agents-spec/" target="_blank" rel="noopener">📖 Docs</a>
+        <a href="https://zoharbabin.com/enterprise-ai-agents-spec/" target="_blank" rel="noopener">📖</a>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/telegram-monitor" target="_blank" rel="noopener">Telegram Monitor</a></div>
-      <div class="card-desc">Real-time Telegram channel monitoring with AI-powered intelligence briefings. Multi-pane TUI dashboard with Claude-powered analysis, translation, and urgency scoring.</div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Claude</span><span class="tag">TUI</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://github.com/zoharbabin/telegram-monitor" target="_blank" rel="noopener">Telegram Monitor</a></div>
+      <div class="proj-desc">Real-time Telegram channel monitoring with AI briefings. Multi-pane TUI dashboard with Claude-powered analysis, translation, and urgency scoring.</div>
+      <div class="proj-actions">
+        <span class="tag">Python</span><span class="tag">Claude</span>
         <a href="https://github.com/zoharbabin/telegram-monitor" target="_blank" rel="noopener" data-stars="zoharbabin/telegram-monitor">⭐ GitHub</a>
       </div>
     </div>
-
   </div>
 
-  <!-- ── Developer Tools ── -->
-  <h2>Developer Tools &amp; CLIs</h2>
-  <div class="grid">
+  <div class="proj-section">
+    <div class="proj-group-label">Developer Tools &amp; CLIs</div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/brand-voice" target="_blank" rel="noopener">Brand Voice</a></div>
-      <div class="card-desc">Enforce brand writing guidelines in Claude Code — PostToolUse hook + MCP server + CLI.</div>
-      <div class="tags"><span class="tag">Claude Code</span><span class="tag">MCP</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://github.com/zoharbabin/brand-voice" target="_blank" rel="noopener">Brand Voice</a></div>
+      <div class="proj-desc">Enforce brand writing guidelines in Claude Code — PostToolUse hook + MCP server + CLI.</div>
+      <div class="proj-actions">
+        <span class="tag">Claude Code</span><span class="tag">MCP</span>
         <a href="https://github.com/zoharbabin/brand-voice" target="_blank" rel="noopener" data-stars="zoharbabin/brand-voice">⭐ GitHub</a>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/claude-code-message-timestamps" target="_blank" rel="noopener">Claude Code Timestamps</a></div>
-      <div class="card-desc">Show local time on every Claude Code message and let Claude know when each prompt was sent. Zero-config plugin, cross-OS.</div>
-      <div class="tags"><span class="tag">Claude Code</span><span class="tag">Plugin</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://github.com/zoharbabin/claude-code-message-timestamps" target="_blank" rel="noopener">Claude Code Timestamps</a></div>
+      <div class="proj-desc">Show local time on every Claude Code message and let Claude know when each prompt was sent. Zero-config, cross-OS.</div>
+      <div class="proj-actions">
+        <span class="tag">Claude Code</span>
         <a href="https://github.com/zoharbabin/claude-code-message-timestamps" target="_blank" rel="noopener" data-stars="zoharbabin/claude-code-message-timestamps">⭐ GitHub</a>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/company-recon-skill" target="_blank" rel="noopener">Company Recon Skill</a></div>
-      <div class="card-desc">Claude Code skill for SaaS technology reconnaissance — discovers every website embedding a target company's technology using OSINT.</div>
-      <div class="tags"><span class="tag">Claude Code</span><span class="tag">OSINT</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://github.com/zoharbabin/company-recon-skill" target="_blank" rel="noopener">Company Recon Skill</a></div>
+      <div class="proj-desc">Claude Code skill for SaaS technology reconnaissance — finds every site embedding a target company's tech using OSINT.</div>
+      <div class="proj-actions">
+        <span class="tag">Claude Code</span><span class="tag">OSINT</span>
         <a href="https://github.com/zoharbabin/company-recon-skill" target="_blank" rel="noopener" data-stars="zoharbabin/company-recon-skill">⭐ GitHub</a>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/github-org-stats" target="_blank" rel="noopener">GitHub Org Stats</a></div>
-      <div class="card-desc">Comprehensive tool for analyzing GitHub organization statistics with multiple auth methods and output formats.</div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">PyPI</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://github.com/zoharbabin/github-org-stats" target="_blank" rel="noopener">GitHub Org Stats</a></div>
+      <div class="proj-desc">Analyze GitHub organization statistics with multiple auth methods and output formats.</div>
+      <div class="proj-actions">
+        <span class="tag">Python</span>
         <a href="https://github.com/zoharbabin/github-org-stats" target="_blank" rel="noopener" data-stars="zoharbabin/github-org-stats">⭐ GitHub</a>
         <a href="https://pypi.org/project/github-org-stats/" target="_blank" rel="noopener">📦 PyPI</a>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/edgar_analytics" target="_blank" rel="noopener">EDGAR Analytics</a></div>
-      <div class="card-desc">Python library for extracting, analyzing, and forecasting SEC EDGAR filings. Comprehensive metrics, growth rates, and automated reporting.</div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Finance</span><span class="tag">PyPI</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://github.com/zoharbabin/edgar_analytics" target="_blank" rel="noopener">EDGAR Analytics</a></div>
+      <div class="proj-desc">Extract, analyze, and forecast SEC EDGAR filings — metrics, growth rates, automated reporting.</div>
+      <div class="proj-actions">
+        <span class="tag">Python</span><span class="tag">Finance</span>
         <a href="https://github.com/zoharbabin/edgar_analytics" target="_blank" rel="noopener" data-stars="zoharbabin/edgar_analytics">⭐ GitHub</a>
         <a href="https://pypi.org/project/edgar-analytics/" target="_blank" rel="noopener">📦 PyPI</a>
       </div>
     </div>
-
   </div>
 
-  <!-- ── Creative & Community ── -->
-  <h2>Creative &amp; Community</h2>
-  <div class="grid">
+  <div class="proj-section">
+    <div class="proj-group-label">Creative &amp; Community</div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://zoharbabin.com/ai-hackerspace-chat-chronicles/" target="_blank" rel="noopener">AI Chat Chronicles</a></div>
-      <div class="card-desc">Interactive web app that summarizes WhatsApp group chats, highlighting key moments, trends, and personalized year-in-review.</div>
-      <div class="tags"><span class="tag">Web</span><span class="tag">AI</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://zoharbabin.com/ai-hackerspace-chat-chronicles/" target="_blank" rel="noopener">AI Chat Chronicles</a></div>
+      <div class="proj-desc">Interactive app that summarizes WhatsApp group chats, highlighting key moments, trends, and personalized year-in-review.</div>
+      <div class="proj-actions">
+        <span class="tag">Web</span><span class="tag">AI</span>
         <a href="https://github.com/zoharbabin/ai-hackerspace-chat-chronicles" target="_blank" rel="noopener" data-stars="zoharbabin/ai-hackerspace-chat-chronicles">⭐ GitHub</a>
         <a href="https://zoharbabin.com/ai-hackerspace-chat-chronicles/" target="_blank" rel="noopener">🌐 Live</a>
       </div>
     </div>
 
-    <div class="card">
-      <div class="card-title"><a href="https://github.com/zoharbabin/karaokify" target="_blank" rel="noopener">Karaokify</a></div>
-      <div class="card-desc">Transforms audio into dynamic karaoke-style highlight videos for social media — transcription, crossfading, waveform overlays, and subtitles.</div>
-      <div class="tags"><span class="tag">Python</span><span class="tag">Video</span><span class="tag">AI</span></div>
-      <div class="links">
+    <div class="proj-row">
+      <div class="proj-name"><a href="https://github.com/zoharbabin/karaokify" target="_blank" rel="noopener">Karaokify</a></div>
+      <div class="proj-desc">Transforms audio into karaoke-style highlight videos — transcription, crossfading, waveform overlays, subtitles.</div>
+      <div class="proj-actions">
+        <span class="tag">Python</span><span class="tag">Video</span>
         <a href="https://github.com/zoharbabin/karaokify" target="_blank" rel="noopener" data-stars="zoharbabin/karaokify">⭐ GitHub</a>
       </div>
     </div>
-
   </div>
 
   <footer>
@@ -503,27 +546,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </div>
 
 <script>
-  /* ── Theme toggle ── */
   (function() {
     var html = document.documentElement;
     var btn  = document.getElementById('theme-btn');
     var moon = document.getElementById('ico-moon');
     var sun  = document.getElementById('ico-sun');
-
     function isDark() {
       var t = html.getAttribute('data-theme');
-      if (t === 'dark')  return true;
+      if (t === 'dark') return true;
       if (t === 'light') return false;
       return window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-
     function applyIcons(dark) {
       moon.style.display = dark ? '' : 'none';
       sun.style.display  = dark ? 'none' : '';
     }
-
     applyIcons(isDark());
-
     btn.addEventListener('click', function() {
       var goingDark = !isDark();
       var theme = goingDark ? 'dark' : 'light';
@@ -533,23 +571,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     });
   })();
 
-  /* ── GitHub star counts ── */
   (function() {
-    function fmt(n) {
-      return n >= 1000 ? (n / 1000).toFixed(1).replace(/\.0$/, '') + 'k' : String(n);
-    }
+    function fmt(n) { return n >= 1000 ? (n/1000).toFixed(1).replace(/\.0$/,'') + 'k' : String(n); }
 
-    /* Featured cards: update named stat pills */
     var featured = {
       'zoharbabin/web-researcher-mcp': 'stars-wrm',
       'zoharbabin/due-diligence-agents': 'stars-dda'
     };
-
     Object.keys(featured).forEach(function(repo) {
       var el = document.getElementById(featured[repo]);
       if (!el) return;
-      var cached;
-      try { cached = sessionStorage.getItem('gh:' + repo); } catch(e) {}
+      var cached; try { cached = sessionStorage.getItem('gh:' + repo); } catch(e) {}
       if (cached) { el.textContent = '★ ' + cached; return; }
       fetch('https://api.github.com/repos/' + repo)
         .then(function(r) { return r.json(); })
@@ -558,15 +590,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           var s = fmt(d.stargazers_count);
           try { sessionStorage.setItem('gh:' + repo, s); } catch(e) {}
           el.textContent = '★ ' + s;
-        })
-        .catch(function() {});
+        }).catch(function() {});
     });
 
-    /* All other cards: update link text from "⭐ GitHub" to "⭐ {count}" */
     document.querySelectorAll('a[data-stars]').forEach(function(link) {
       var repo = link.getAttribute('data-stars');
-      var cached;
-      try { cached = sessionStorage.getItem('gh:' + repo); } catch(e) {}
+      var cached; try { cached = sessionStorage.getItem('gh:' + repo); } catch(e) {}
       if (cached) { link.textContent = '⭐ ' + cached; return; }
       fetch('https://api.github.com/repos/' + repo)
         .then(function(r) { return r.json(); })
@@ -575,13 +604,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           var s = fmt(d.stargazers_count);
           try { sessionStorage.setItem('gh:' + repo, s); } catch(e) {}
           link.textContent = '⭐ ' + s;
-        })
-        .catch(function() {});
-    });
-
-    /* Lazy-load images */
-    document.querySelectorAll('img[src$=".gif"], img[src$=".png"]').forEach(function(img) {
-      if (!img.loading) img.loading = 'lazy';
+        }).catch(function() {});
     });
   })();
 </script>
