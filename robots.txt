@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://zoharbabin.github.io/web-researcher-mcp/sitemap.xml
+Sitemap: https://zoharbabin.com/web-researcher-mcp/sitemap.xml
