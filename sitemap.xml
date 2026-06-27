@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Root -->
+  <url>
+    <loc>https://zoharbabin.com/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <!-- Web Researcher MCP -->
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/</loc><lastmod>2026-06-27</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/examples/</loc><lastmod>2026-06-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/tools/</loc><lastmod>2026-06-27</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/api-setup/</loc><lastmod>2026-06-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/providers/</loc><lastmod>2026-06-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/deployment/</loc><lastmod>2026-06-27</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/architecture/</loc><lastmod>2026-06-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/contributing/</loc><lastmod>2026-06-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/security/</loc><lastmod>2026-06-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/security-and-compliance/</loc><lastmod>2026-06-27</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/error-handling/</loc><lastmod>2026-06-27</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/lessons-learned/</loc><lastmod>2026-06-27</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/migration/</loc><lastmod>2026-06-27</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/session-persistence/</loc><lastmod>2026-06-27</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/brand-guidelines/</loc><lastmod>2026-06-27</lastmod><priority>0.4</priority></url>
+  <url><loc>https://zoharbabin.com/web-researcher-mcp/privacy/</loc><lastmod>2026-06-27</lastmod><priority>0.4</priority></url>
+
+  <!-- Due Diligence Agents -->
+  <url><loc>https://zoharbabin.com/due-diligence-agents/</loc><lastmod>2026-06-11</lastmod><priority>0.9</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/getting-started/</loc><lastmod>2026-06-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/running-pipeline/</loc><lastmod>2026-06-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/reading-report/</loc><lastmod>2026-06-11</lastmod><priority>0.8</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/cli-reference/</loc><lastmod>2026-06-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/deal-configuration/</loc><lastmod>2026-06-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/model-providers/</loc><lastmod>2026-06-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/provider-coverage/</loc><lastmod>2026-06-11</lastmod><priority>0.7</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/user-guide/troubleshooting/</loc><lastmod>2026-06-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/agent-anatomy/</loc><lastmod>2026-06-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/agent-customization/</loc><lastmod>2026-06-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/knowledge-architecture/</loc><lastmod>2026-06-11</lastmod><priority>0.6</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/eval-datasheet/</loc><lastmod>2026-06-11</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/search-guide/</loc><lastmod>2026-06-11</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/system-card/</loc><lastmod>2026-06-11</lastmod><priority>0.5</priority></url>
+  <url><loc>https://zoharbabin.com/due-diligence-agents/contributing/</loc><lastmod>2026-06-11</lastmod><priority>0.5</priority></url>
+
+  <!-- Enterprise AI Agents Spec -->
+  <url>
+    <loc>https://zoharbabin.com/enterprise-ai-agents-spec/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- AI Hackerspace Chat Chronicles -->
+  <url>
+    <loc>https://zoharbabin.com/ai-hackerspace-chat-chronicles/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <priority>0.7</priority>
+  </url>
+
+</urlset>
