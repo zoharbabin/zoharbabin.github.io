@@ -1,20 +1,21 @@
 # Zohar Babin
 
-> Chief Strategy & Corporate Development Officer at Kaltura, Inc. (Nasdaq: KLTR).
-> Open-source contributor since age 13; ships AI agent tooling — research
-> automation, M&A due-diligence agents, and enterprise agent architecture.
+> CSO at Kaltura, Inc. (NASDAQ: KLTR), the Agentic DX Platform. Open-source
+> builder & advocate. Dreaming, Building, Breaking, & Shipping agentic AI,
+> research, and personal fintech. Investor.
 
 Zohar has been at Kaltura for 20+ years, helping build its Agentic DX
 Platform (formerly described as a video platform) from an open-source
-disruptor into a public company. He leads strategy, partnerships, and M&A.
-He has been writing and shipping open-source software since he was 13 —
-AI agent tooling is the current chapter of a much longer habit, not a new
-side project. Ships under the GitHub handle zoharbabin.
+disruptor into a public company. He leads strategy, partnerships, and M&A
+as Chief Strategy & Corporate Development Officer (CSO). He has been
+writing and shipping open-source software since he was 13 — AI agent
+tooling is the current chapter of a much longer habit, not a new side
+project. Ships under the GitHub handle zoharbabin.
 
 ## Identity
 
-- Current title: Chief Strategy & Corporate Development Officer, Kaltura, Inc.
-- Company: Kaltura, Inc. (Nasdaq: KLTR) — https://corp.kaltura.com/
+- Current title: Chief Strategy & Corporate Development Officer (CSO), Kaltura, Inc.
+- Company: Kaltura, Inc. (NASDAQ: KLTR) — https://corp.kaltura.com/
 - GitHub: https://github.com/zoharbabin
 - LinkedIn: https://www.linkedin.com/in/zoharbabin/
 - X: https://x.com/zohar
