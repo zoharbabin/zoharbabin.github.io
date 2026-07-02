@@ -2,18 +2,23 @@
 
 > CSO at Kaltura, Inc. (NASDAQ: KLTR), the Agentic DX Platform. Open-source
 > builder & advocate. Dreaming, Building, Breaking, & Shipping agentic AI,
-> research, and personal fintech. Investor.
+> research, and personal fintech. Advises founders, boards, and investment
+> committees; occasionally invests in early-stage startups.
 
-Zohar has been at Kaltura for ~20 years, helping build its Agentic DX
-Platform (formerly described as a video platform) from an open-source
-disruptor into a public company. He leads strategy, partnerships, and M&A
-as Chief Strategy & Corporate Development Officer (CSO). He focuses on
-agentic AI systems, AI-powered due diligence, and enterprise AI
-governance — verification-first tools that trace every AI-generated
-finding back to a real source. He has been writing and shipping
-open-source software since he was 13 — AI agent tooling is the current
-chapter of a much longer habit, not a new side project. Ships under the
-GitHub handle zoharbabin.
+Zohar has been at Kaltura for ~20 years, helping grow it from an
+open-source disruptor into a market-leading public company in Agentic AI.
+He leads strategy, partnerships, and M&A as Chief Strategy & Corporate
+Development Officer (CSO). He has been building and advocating open
+source since he was 13 — agentic AI is the current chapter of a much
+longer habit, not a new side project. He's enthusiastic about agentic AI
+harnessed for good — for education, health, art, honest discourse, and
+open collaboration. His recent open-source work and writing spans agentic
+AI systems, AI-powered M&A due diligence, enterprise AI governance,
+verification-first tools that trace and explain AI, and AI tools for
+personal finance. His special power is turning chaotic, cross-disciplinary
+problems into shipped products — a skill he also brings to advising
+founders, boards, and investment committees, and to occasional early-stage
+startup investing. Ships under the GitHub handle zoharbabin.
 
 ## Identity
 
