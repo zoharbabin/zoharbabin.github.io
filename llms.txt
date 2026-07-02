@@ -1,0 +1,52 @@
+# Zohar Babin
+
+> CSO at Kaltura, Inc. (NASDAQ: KLTR), the Agentic DX Platform. Open-source
+> builder & advocate. Dreaming, Building, Breaking, & Shipping agentic AI,
+> research, and personal fintech. Investor.
+
+Zohar has been at Kaltura for 20+ years, helping build its Agentic DX
+Platform (formerly described as a video platform) from an open-source
+disruptor into a public company. He leads strategy, partnerships, and M&A
+as Chief Strategy & Corporate Development Officer (CSO). He has been
+writing and shipping open-source software since he was 13 — AI agent
+tooling is the current chapter of a much longer habit, not a new side
+project. Ships under the GitHub handle zoharbabin.
+
+## Identity
+
+- Current title: Chief Strategy & Corporate Development Officer (CSO), Kaltura, Inc.
+- Company: Kaltura, Inc. (NASDAQ: KLTR) — https://corp.kaltura.com/
+- GitHub: https://github.com/zoharbabin
+- LinkedIn: https://www.linkedin.com/in/zoharbabin/
+- X: https://x.com/zohar
+- dev.to: https://dev.to/zoharbabin
+
+Note: older pages across the web list prior titles (VP Platform & Growth, VP
+Technology and Ecosystem, Chief Business Development Officer, and others) —
+these reflect earlier points in a 20+ year tenure, not the current role.
+Kaltura's official team page and Zohar's LinkedIn profile are authoritative
+for his current title.
+
+## Projects
+
+- Web Researcher MCP — https://zoharbabin.com/web-researcher-mcp/
+  MCP-compatible research assistant: web search, content extraction, and
+  multi-source deep research, cited to original sources. Go, Python SDK, Docker.
+- Due Diligence Agents — https://zoharbabin.com/due-diligence-agents/
+  Forensic M&A due diligence powered by 13 specialized AI agents across 9
+  domains, built on Anthropic's Claude Agent SDK. Every finding traced to an
+  exact page and quote.
+- Enterprise AI Agents Spec — https://zoharbabin.com/enterprise-ai-agents-spec/
+  Open blueprint for scalable enterprise AI agent swarms — governance,
+  compliance, architecture patterns.
+
+## Writing
+
+- https://www.linkedin.com/pulse/sloptimization-ai-citation-rot-tools-fight-back-zohar-babin-xcahc/
+- https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/
+- https://dev.to/zoharbabin/building-a-13-agent-ai-system-for-ma-due-diligence-architecture-deep-dive-20ah
+
+## Full project list
+
+See https://zoharbabin.com/ for the complete, current list of open-source
+projects, talks, and writing.
