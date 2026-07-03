@@ -180,12 +180,10 @@
 
     /* ── Section heading ── */
     h2 {
-      font-size: .62rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: .13em;
-      color: var(--muted);
-      margin: 3.25rem 0 1.5rem;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: var(--text);
+      margin: 3rem 0 1.25rem;
     }
 
     .about-body {
@@ -197,8 +195,6 @@
     /* ═══════════════════════════════
        EDITORIAL LIST  (Writing)
     ═══════════════════════════════ */
-    .ed-list { border-top: 1px solid var(--border); }
-
     .ed-item {
       display: flex;
       align-items: flex-start;
@@ -208,13 +204,15 @@
       text-decoration: none;
       color: inherit;
     }
+    .ed-item:first-child { padding-top: 0; }
+    .ed-item:last-child { border-bottom: none; }
     .ed-type {
       font-size: .58rem;
       font-weight: 800;
       text-transform: uppercase;
       letter-spacing: .1em;
       color: var(--accent);
-      min-width: 3.4rem;
+      width: 4.5rem;
       padding-top: .3rem;
       flex-shrink: 0;
     }
@@ -242,6 +240,53 @@
     }
     .ed-item:hover .ed-arrow { color: var(--accent); transform: translate(3px,-3px); }
 
+    .ed-more-label {
+      font-size: .72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--text-sub);
+      margin: 2rem 0 .75rem;
+      padding-bottom: .4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .ed-row {
+      display: flex;
+      align-items: baseline;
+      gap: .75rem;
+      padding: .55rem 0;
+      border-bottom: 1px solid var(--border);
+      text-decoration: none;
+      color: inherit;
+    }
+    .ed-row:first-child { padding-top: 0; }
+    .ed-row-type {
+      font-size: .58rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--accent);
+      width: 4.5rem;
+      flex-shrink: 0;
+    }
+    .ed-row-title {
+      font-size: .8rem;
+      font-weight: 400;
+      color: var(--text-sub);
+      flex: 1;
+      min-width: 0;
+      transition: color .15s;
+    }
+    .ed-row:last-child { border-bottom: none; }
+    .ed-row:hover .ed-row-title { color: var(--accent); }
+    .ed-row-arrow {
+      color: var(--muted);
+      font-size: .7rem;
+      flex-shrink: 0;
+      transition: color .15s, transform .15s;
+    }
+    .ed-row:hover .ed-row-arrow { color: var(--accent); transform: translate(3px,-3px); }
+
     /* ═══════════════════════════════
        SPOTLIGHT  (Featured Projects)
     ═══════════════════════════════ */
@@ -250,8 +295,19 @@
       grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
       gap: 2rem 3.5rem;
     }
-    .spotlight { border-left: 2px solid var(--accent); padding-left: 1.35rem; }
+    .spotlight {
+      position: relative;
+      border-left: 2px solid var(--accent);
+      padding: .1rem 1rem .1rem 1.35rem;
+      margin: -.1rem -1rem -.1rem -.15rem;
+      border-radius: 6px;
+      transition: background .15s;
+    }
+    .spotlight:hover { background: var(--surface); }
+    .spotlight-cover { position: absolute; inset: 0; z-index: 0; }
     .spotlight-name {
+      position: relative;
+      z-index: 1;
       font-size: 1.2rem;
       font-weight: 700;
       color: var(--text);
@@ -259,15 +315,19 @@
       display: block;
       margin-bottom: .45rem;
       transition: color .15s;
+      pointer-events: none;
     }
-    .spotlight-name:hover { color: var(--accent); }
+    .spotlight:hover .spotlight-name { color: var(--accent); }
     .spotlight-desc {
+      position: relative;
+      z-index: 1;
       font-size: .87rem;
       color: var(--text-sub);
       line-height: 1.6;
       margin-bottom: .85rem;
+      pointer-events: none;
     }
-    .stats { display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .65rem; }
+    .stats { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .35rem; margin-bottom: .65rem; }
     .stat {
       font-size: .7rem;
       font-weight: 600;
@@ -276,7 +336,7 @@
       border-radius: 20px;
       padding: .2em .7em;
     }
-    .tags { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .65rem; }
+    .tags { position: relative; z-index: 1; display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: .65rem; }
     .tag {
       font-size: .65rem;
       font-weight: 500;
@@ -285,28 +345,33 @@
       border-radius: 3px;
       padding: .1em .45em;
     }
-    .s-links { display: flex; gap: .75rem; flex-wrap: wrap; }
+    .s-links { position: relative; z-index: 1; display: flex; gap: .75rem; flex-wrap: wrap; }
     .s-links a {
+      position: relative;
+      z-index: 1;
       font-size: .79rem;
       color: var(--muted);
       text-decoration: none;
       transition: color .15s;
     }
     .s-links a:hover { color: var(--accent); }
+    .gh-icon { width: .8em; height: .8em; vertical-align: -.05em; margin-right: .05em; }
 
     /* ═══════════════════════════════
        PROJECT ROWS  (All others)
     ═══════════════════════════════ */
-    .proj-section { border-top: 1px solid var(--border); margin-top: 3rem; }
+    .proj-section { margin-top: 2rem; }
     .proj-section:first-child { margin-top: 0; }
 
     .proj-group-label {
-      font-size: .58rem;
-      font-weight: 700;
+      font-size: .72rem;
+      font-weight: 800;
       text-transform: uppercase;
-      letter-spacing: .13em;
-      color: var(--muted);
-      padding: 1.1rem 0 .55rem;
+      letter-spacing: .1em;
+      color: var(--text-sub);
+      padding-bottom: .4rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: .5rem;
     }
 
     .proj-row {
@@ -317,6 +382,7 @@
       border-bottom: 1px solid var(--border);
       flex-wrap: wrap;
     }
+    .proj-row:last-child { border-bottom: none; }
     .proj-name {
       font-size: .88rem;
       font-weight: 600;
@@ -440,40 +506,51 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="ed-arrow">↗</span>
     </a>
 
-    <a class="ed-item" href="https://dev.to/zoharbabin/building-a-13-agent-ai-system-for-ma-due-diligence-architecture-deep-dive-20ah" target="_blank" rel="noopener">
-      <span class="ed-type">Deep Dive</span>
-      <div class="ed-body">
-        <div class="ed-title">Building a 13-Agent AI System for M&amp;A Due Diligence: Architecture Deep Dive</div>
-        <div class="ed-desc">The full engineering breakdown behind Due Diligence Agents — the 38-step pipeline, cost-tiered models, and quality gates that make 13 agents auditable.</div>
-      </div>
-      <span class="ed-arrow">↗</span>
-    </a>
-
-    <a class="ed-item" href="https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/" target="_blank" rel="noopener">
+    <a class="ed-item" href="https://dev.to/zoharbabin/claude-fable-5-when-to-reach-for-the-frontier-and-when-not-to-243d" target="_blank" rel="noopener">
       <span class="ed-type">Article</span>
       <div class="ed-body">
-        <div class="ed-title">Why Your AI Coding Assistant Is Failing You — and How to Fix It</div>
-        <div class="ed-desc">The root causes behind AI coding tools that hallucinate, forget context, and ship broken code — and what you can do about it.</div>
+        <div class="ed-title">Claude Fable 5: When to Reach for the Frontier — and When Not To</div>
+        <div class="ed-desc">A model-routing framework built from auditing ~20 active projects against what Fable 5 actually changes — and the cost math behind when it's worth it.</div>
       </div>
       <span class="ed-arrow">↗</span>
     </a>
 
-    <a class="ed-item" href="https://zoharbabin.com/web-researcher-mcp/decks/compliance/" target="_blank" rel="noopener">
-      <span class="ed-type">Deck</span>
+    <a class="ed-item" href="https://dev.to/zoharbabin/from-nodejs-to-go-rebuilding-an-mcp-server-for-production-oil" target="_blank" rel="noopener">
+      <span class="ed-type">Deep Dive</span>
       <div class="ed-body">
-        <div class="ed-title">Compliance as Architecture</div>
-        <div class="ed-desc">One maintainer. One open-source repo. Aligned with 23 security &amp; privacy standards — without writing 23 checklists. How good architecture replaces paperwork.</div>
+        <div class="ed-title">From Node.js to Go: Rebuilding an MCP Server for Production</div>
+        <div class="ed-desc">Why Web Researcher MCP was rebuilt from scratch in Go — orphan processes, single-provider risk, and the production issues a rewrite actually fixed.</div>
       </div>
       <span class="ed-arrow">↗</span>
     </a>
 
-    <a class="ed-item" href="https://zoharbabin.com/due-diligence-agents/marketing/presentation.html" target="_blank" rel="noopener">
-      <span class="ed-type">Deck</span>
-      <div class="ed-body">
-        <div class="ed-title">Due Diligence Agents — AI-Powered M&amp;A Due Diligence</div>
-        <div class="ed-desc">Nine specialist AI agents read an entire data room in parallel, cross-reference every finding, and trace every conclusion to an exact page and quote.</div>
-      </div>
-      <span class="ed-arrow">↗</span>
+  </div>
+
+  <div class="ed-more-label">More Writing &amp; Talks</div>
+  <div class="ed-list-more">
+
+    <a class="ed-row" href="https://dev.to/zoharbabin/building-a-13-agent-ai-system-for-ma-due-diligence-architecture-deep-dive-20ah" target="_blank" rel="noopener">
+      <span class="ed-row-type">Deep Dive</span>
+      <span class="ed-row-title">Building a 13-Agent AI System for M&amp;A Due Diligence: Architecture Deep Dive</span>
+      <span class="ed-row-arrow">↗</span>
+    </a>
+
+    <a class="ed-row" href="https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/" target="_blank" rel="noopener">
+      <span class="ed-row-type">Article</span>
+      <span class="ed-row-title">Why Your AI Coding Assistant Is Failing You — and How to Fix It</span>
+      <span class="ed-row-arrow">↗</span>
+    </a>
+
+    <a class="ed-row" href="https://zoharbabin.com/web-researcher-mcp/decks/compliance/" target="_blank" rel="noopener">
+      <span class="ed-row-type">Deck</span>
+      <span class="ed-row-title">Compliance as Architecture</span>
+      <span class="ed-row-arrow">↗</span>
+    </a>
+
+    <a class="ed-row" href="https://zoharbabin.com/due-diligence-agents/marketing/presentation.html" target="_blank" rel="noopener">
+      <span class="ed-row-type">Deck</span>
+      <span class="ed-row-title">Due Diligence Agents — AI-Powered M&amp;A Due Diligence</span>
+      <span class="ed-row-arrow">↗</span>
     </a>
 
   </div>
@@ -483,6 +560,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="spotlight-grid">
 
     <div class="spotlight">
+      <a class="spotlight-cover" href="https://zoharbabin.com/web-researcher-mcp/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"></a>
       <a class="spotlight-name" href="https://zoharbabin.com/web-researcher-mcp/" target="_blank" rel="noopener">Web Researcher MCP</a>
       <p class="spotlight-desc">Your AI research assistant for any MCP client — web search, content extraction, and multi-source deep research. Every result is cited to the real source. Free, private, open source.</p>
       <div class="stats">
@@ -494,7 +572,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="tags"><span class="tag">Go</span><span class="tag">MCP</span><span class="tag">AI</span><span class="tag">Research</span></div>
       <div class="s-links">
-        <a href="https://github.com/zoharbabin/web-researcher-mcp" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/web-researcher-mcp" target="_blank" rel="noopener"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
         <a href="https://zoharbabin.com/web-researcher-mcp/" target="_blank" rel="noopener">📖 Docs</a>
         <a href="https://hub.docker.com/r/zoharbabin/web-researcher-mcp" target="_blank" rel="noopener">🐳 Docker</a>
         <a href="https://pypi.org/project/web-researcher-mcp/" target="_blank" rel="noopener">🐍 PyPI</a>
@@ -502,6 +580,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
 
     <div class="spotlight">
+      <a class="spotlight-cover" href="https://zoharbabin.com/due-diligence-agents/" target="_blank" rel="noopener" aria-hidden="true" tabindex="-1"></a>
       <a class="spotlight-name" href="https://zoharbabin.com/due-diligence-agents/" target="_blank" rel="noopener">Due Diligence Agents</a>
       <p class="spotlight-desc">Forensic M&amp;A due diligence powered by 13 specialized AI agents across 9 domains — Legal, Finance, Cyber, HR, ESG, and more. Every finding traced to an exact page and quote.</p>
       <div class="stats">
@@ -512,7 +591,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="tags"><span class="tag">Python</span><span class="tag">Multi-agent</span><span class="tag">AI</span><span class="tag">Finance</span></div>
       <div class="s-links">
-        <a href="https://github.com/zoharbabin/due-diligence-agents" target="_blank" rel="noopener">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/due-diligence-agents" target="_blank" rel="noopener"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> GitHub</a>
         <a href="https://zoharbabin.com/due-diligence-agents/" target="_blank" rel="noopener">📖 Docs</a>
       </div>
     </div>
@@ -530,8 +609,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Open blueprint for scalable AI agent swarms in enterprise product development — governance, compliance, and architecture.</div>
       <div class="proj-actions">
         <span class="tag">Spec</span><span class="tag">Agentic AI</span>
-        <a href="https://github.com/zoharbabin/enterprise-ai-agents-spec" target="_blank" rel="noopener" data-stars="zoharbabin/enterprise-ai-agents-spec">⭐ GitHub</a>
-        <a href="https://zoharbabin.com/enterprise-ai-agents-spec/" target="_blank" rel="noopener">📖</a>
+        <a href="https://github.com/zoharbabin/enterprise-ai-agents-spec" target="_blank" rel="noopener" data-stars="zoharbabin/enterprise-ai-agents-spec"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
+        <a href="https://zoharbabin.com/enterprise-ai-agents-spec/" target="_blank" rel="noopener">📖 Docs</a>
       </div>
     </div>
 
@@ -540,7 +619,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Real-time Telegram channel monitoring with AI briefings. Multi-pane TUI dashboard with Claude-powered analysis, translation, and urgency scoring.</div>
       <div class="proj-actions">
         <span class="tag">Python</span><span class="tag">Claude</span>
-        <a href="https://github.com/zoharbabin/telegram-monitor" target="_blank" rel="noopener" data-stars="zoharbabin/telegram-monitor">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/telegram-monitor" target="_blank" rel="noopener" data-stars="zoharbabin/telegram-monitor"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
       </div>
     </div>
   </div>
@@ -553,7 +632,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Enforce brand writing guidelines in Claude Code — PostToolUse hook + MCP server + CLI.</div>
       <div class="proj-actions">
         <span class="tag">Claude Code</span><span class="tag">MCP</span>
-        <a href="https://github.com/zoharbabin/brand-voice" target="_blank" rel="noopener" data-stars="zoharbabin/brand-voice">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/brand-voice" target="_blank" rel="noopener" data-stars="zoharbabin/brand-voice"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
       </div>
     </div>
 
@@ -562,7 +641,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Show local time on every Claude Code message and let Claude know when each prompt was sent. Zero-config, cross-OS.</div>
       <div class="proj-actions">
         <span class="tag">Claude Code</span>
-        <a href="https://github.com/zoharbabin/claude-code-message-timestamps" target="_blank" rel="noopener" data-stars="zoharbabin/claude-code-message-timestamps">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/claude-code-message-timestamps" target="_blank" rel="noopener" data-stars="zoharbabin/claude-code-message-timestamps"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
       </div>
     </div>
 
@@ -571,7 +650,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Claude Code skill for SaaS technology reconnaissance — finds every site embedding a target company's tech using OSINT.</div>
       <div class="proj-actions">
         <span class="tag">Claude Code</span><span class="tag">OSINT</span>
-        <a href="https://github.com/zoharbabin/company-recon-skill" target="_blank" rel="noopener" data-stars="zoharbabin/company-recon-skill">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/company-recon-skill" target="_blank" rel="noopener" data-stars="zoharbabin/company-recon-skill"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
       </div>
     </div>
 
@@ -580,7 +659,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Analyze GitHub organization statistics with multiple auth methods and output formats.</div>
       <div class="proj-actions">
         <span class="tag">Python</span>
-        <a href="https://github.com/zoharbabin/github-org-stats" target="_blank" rel="noopener" data-stars="zoharbabin/github-org-stats">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/github-org-stats" target="_blank" rel="noopener" data-stars="zoharbabin/github-org-stats"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
         <a href="https://pypi.org/project/github-org-stats/" target="_blank" rel="noopener">📦 PyPI</a>
       </div>
     </div>
@@ -590,7 +669,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Extract, analyze, and forecast SEC EDGAR filings — metrics, growth rates, automated reporting.</div>
       <div class="proj-actions">
         <span class="tag">Python</span><span class="tag">Finance</span>
-        <a href="https://github.com/zoharbabin/edgar_analytics" target="_blank" rel="noopener" data-stars="zoharbabin/edgar_analytics">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/edgar_analytics" target="_blank" rel="noopener" data-stars="zoharbabin/edgar_analytics"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
         <a href="https://pypi.org/project/edgar-analytics/" target="_blank" rel="noopener">📦 PyPI</a>
       </div>
     </div>
@@ -604,7 +683,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Interactive app that summarizes WhatsApp group chats, highlighting key moments, trends, and personalized year-in-review.</div>
       <div class="proj-actions">
         <span class="tag">Web</span><span class="tag">AI</span>
-        <a href="https://github.com/zoharbabin/ai-hackerspace-chat-chronicles" target="_blank" rel="noopener" data-stars="zoharbabin/ai-hackerspace-chat-chronicles">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/ai-hackerspace-chat-chronicles" target="_blank" rel="noopener" data-stars="zoharbabin/ai-hackerspace-chat-chronicles"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
         <a href="https://zoharbabin.com/ai-hackerspace-chat-chronicles/" target="_blank" rel="noopener">🌐 Live</a>
       </div>
     </div>
@@ -614,7 +693,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="proj-desc">Transforms audio into karaoke-style highlight videos — transcription, crossfading, waveform overlays, subtitles.</div>
       <div class="proj-actions">
         <span class="tag">Python</span><span class="tag">Video</span>
-        <a href="https://github.com/zoharbabin/karaokify" target="_blank" rel="noopener" data-stars="zoharbabin/karaokify">⭐ GitHub</a>
+        <a href="https://github.com/zoharbabin/karaokify" target="_blank" rel="noopener" data-stars="zoharbabin/karaokify"><svg class="gh-icon" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg> <span class="gh-label">GitHub</span></a>
       </div>
     </div>
   </div>
@@ -677,15 +756,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     document.querySelectorAll('a[data-stars]').forEach(function(link) {
       var repo = link.getAttribute('data-stars');
+      var label = link.querySelector('.gh-label');
+      var base = label ? label.textContent : link.textContent;
+      var setText = function(v) { if (label) label.textContent = v; else link.textContent = v; };
       var cached; try { cached = sessionStorage.getItem('gh:' + repo); } catch(e) {}
-      if (cached) { link.textContent = '⭐ ' + cached; return; }
+      if (cached) { setText(base + ' · ' + cached + '★'); return; }
       fetch('https://api.github.com/repos/' + repo)
         .then(function(r) { return r.json(); })
         .then(function(d) {
           if (!d.stargazers_count) return;
           var s = fmt(d.stargazers_count);
           try { sessionStorage.setItem('gh:' + repo, s); } catch(e) {}
-          link.textContent = '⭐ ' + s;
+          setText(base + ' · ' + s + '★');
         }).catch(function() {});
     });
   })();
