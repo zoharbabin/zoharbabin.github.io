@@ -46,7 +46,7 @@ Featured:
 - Web Researcher MCP — https://zoharbabin.com/web-researcher-mcp/
   MCP-compatible research assistant: web search (14 providers), academic,
   patent and SEC filing search, content extraction, and multi-source deep
-  research, cited to original sources. Go, Python SDK. Install via Docker,
+  research, cited to original sources. Written in Go, with Python bindings. Install via Docker,
   Homebrew, Scoop, winget or uvx. 40k+ downloads (PyPI, Docker, releases),
   80+ releases, 63 GitHub stars.
 - Due Diligence Agents — https://zoharbabin.com/due-diligence-agents/
