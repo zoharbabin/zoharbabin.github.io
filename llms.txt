@@ -32,6 +32,8 @@ zoharbabin.
 - LinkedIn: https://www.linkedin.com/in/zoharbabin/
 - X: https://x.com/zohar
 - dev.to: https://dev.to/zoharbabin
+- Docker Hub: https://hub.docker.com/u/zoharbabin
+- PyPI: https://pypi.org/user/zoharbabin/
 
 Note: older pages across the web list prior titles (VP Platform & Growth, VP
 Technology and Ecosystem, Chief Business Development Officer, and others) —
