@@ -41,22 +41,65 @@ for his current title.
 
 ## Projects
 
+Featured:
+
 - Web Researcher MCP — https://zoharbabin.com/web-researcher-mcp/
-  MCP-compatible research assistant: web search, content extraction, and
-  multi-source deep research, cited to original sources. Go, Python SDK, Docker.
+  MCP-compatible research assistant: web search (14 providers), academic,
+  patent and SEC filing search, content extraction, and multi-source deep
+  research, cited to original sources. Go, Python SDK. Install via Docker,
+  Homebrew, Scoop, winget or uvx. 40k+ downloads (PyPI, Docker, releases),
+  80+ releases, 63 GitHub stars.
 - Due Diligence Agents — https://zoharbabin.com/due-diligence-agents/
   Forensic M&A due diligence powered by 13 specialized AI agents across 9
-  domains, built on Anthropic's Claude Agent SDK. Every finding traced to an
-  exact page and quote.
+  domains, built on Anthropic's Claude Agent SDK. Citation-verified, not RAG:
+  every finding traced to an exact page and quote. Runs on the Anthropic API,
+  AWS Bedrock, Google Vertex AI or an Anthropic-compatible gateway. 10k+
+  downloads (PyPI, Docker), 112 GitHub stars, 26 forks.
+
+More:
+
+- Kaltura Intelligent Agents SDK — https://kaltura.github.io/intelligent-agents-sdk/
+  Zero-dependency JavaScript SDK for conversational AI avatar agents: provision,
+  configure, measure, and run them live in any web page. MIT.
 - Enterprise AI Agents Spec — https://zoharbabin.com/enterprise-ai-agents-spec/
-  Open blueprint for scalable enterprise AI agent swarms — governance,
+  Open blueprint for scalable enterprise AI agent swarms: governance,
   compliance, architecture patterns.
+- WebRTC Inspector — https://github.com/zoharbabin/webrtc-inspector
+  Debug and fault-test WebRTC sessions. Chrome extension, MCP server for AI
+  coding agents, npm library and Playwright plugin.
+- Claude Code Timestamps — https://github.com/zoharbabin/claude-code-message-timestamps
+  Show local time on every Claude Code message. Zero-config, cross-OS.
+- Brand Voice — https://github.com/zoharbabin/brand-voice
+  Enforce brand writing guidelines in Claude Code: PostToolUse hook, MCP server, CLI.
+- EDGAR Analytics — https://github.com/zoharbabin/edgar_analytics
+  Python library to extract, analyze and forecast SEC EDGAR filings. 11k+ PyPI
+  downloads.
+- Fen — https://fen.md/
+  Native Swift/SwiftUI Markdown editor for macOS and iOS. Local-first, no telemetry.
+
+Across all projects: 63,000+ downloads (PyPI, Docker, npm, GitHub releases),
+485+ GitHub stars across 48 public repos, 130+ tagged releases,
+450+ merged PRs across open-source projects (including Microsoft winget-pkgs).
+
+Earlier work: Telegram Monitor, Company Recon Skill, GitHub Org Stats,
+AI Chat Chronicles, Karaokify (all on https://github.com/zoharbabin).
 
 ## Writing
 
 - https://www.linkedin.com/pulse/sloptimization-ai-citation-rot-tools-fight-back-zohar-babin-xcahc/
-- https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/
+  Sloptimization, AI Citation Rot, and the Tools That Fight Back
+- https://dev.to/zoharbabin/claude-fable-5-when-to-reach-for-the-frontier-and-when-not-to-243d
+  Claude Fable 5: When to Reach for the Frontier, and When Not To
+- https://dev.to/zoharbabin/from-nodejs-to-go-rebuilding-an-mcp-server-for-production-oil
+  From Node.js to Go: Rebuilding an MCP Server for Production
+- https://dev.to/zoharbabin/ai-assistants-lie-about-citations-heres-how-to-catch-them-5608
+  AI Assistants Lie About Citations. Here's How to Catch Them.
 - https://dev.to/zoharbabin/building-a-13-agent-ai-system-for-ma-due-diligence-architecture-deep-dive-20ah
+  Building a 13-Agent AI System for M&A Due Diligence: Architecture Deep Dive
+- https://www.linkedin.com/pulse/why-your-ai-coding-assistant-failing-you-how-fix-zohar-babin-4tkbf/
+  Why Your AI Coding Assistant Is Failing You, and How to Fix It
+- https://www.linkedin.com/pulse/from-solo-ai-super-team-building-software-agent-swarm-zohar-babin-xtfqf
+  Building Software with an AI Agent Swarm in Roo Code
 
 ## Full project list
 
